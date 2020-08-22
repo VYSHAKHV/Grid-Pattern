@@ -76,9 +76,7 @@ namespace MatrixGrid
         private void toolStripMenuItemSize4_Click(object sender, EventArgs e)
         {
 
-           // m_NoOfRows = DEFAULT_NO_ROWS+1;
-            //m_NoOfCols = DEFAULT_NO_COLS+1;
-           // this.Refresh();
+           
 
             m_iGridMaxSize = 4;
             this.Refresh();
@@ -87,27 +85,21 @@ namespace MatrixGrid
 
         private void toolStripMenuItemSize5_Click(object sender, EventArgs e)
         {
-            //m_NoOfRows = DEFAULT_NO_ROWS + 2;
-            //m_NoOfCols = DEFAULT_NO_COLS + 2;
-           // this.Refresh();
+            
             m_iGridMaxSize = 5;
             this.Refresh();
         }
 
         private void toolStripMenuItemSize6_Click(object sender, EventArgs e)
         {
-            //m_NoOfRows = DEFAULT_NO_ROWS + 3;
-           // m_NoOfCols = DEFAULT_NO_COLS + 3;
-           // this.Refresh();
+            
             m_iGridMaxSize = 6;
             this.Refresh();
         }
 
         private void toolStripMenuItemSize7_Click(object sender, EventArgs e)
         {
-           // m_NoOfRows = DEFAULT_NO_ROWS + 4;
-            //m_NoOfCols = DEFAULT_NO_COLS + 4;
-            //this.Refresh();
+           
             m_iGridMaxSize = 7;
             this.Refresh();
         }
@@ -141,8 +133,7 @@ namespace MatrixGrid
                         m_iCounter = 3;
                     }
                     Invalidate();
-                    //labelcounter.Invoke(new MethodInvoker(delegate { labelCounter.Text = m_iCounter.ToString(); }));
-                   // labelCounter.Text = m_iCounter.ToString();
+                    
                     Thread.Sleep(500);
                 }
             }
@@ -150,6 +141,23 @@ namespace MatrixGrid
             {
 
             }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+            CounterThread = new Thread(new ThreadStart(ThreadCounter));
+            CounterThread.Start();
+            bThreasStatus = true;
+        }
+
+        private void Stop_Click(object sender, EventArgs e)
+        {
+            CounterThread.Suspend();
         }
     }
 }
