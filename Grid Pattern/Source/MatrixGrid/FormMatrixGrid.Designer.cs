@@ -148,7 +148,7 @@ namespace MatrixGrid
             this.Start.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(23, 22);
-            this.Start.Text = "toolStripButton1";
+            this.Start.Text = "Start";
             this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // Stop
@@ -159,7 +159,7 @@ namespace MatrixGrid
             this.Stop.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(23, 22);
-            this.Stop.Text = "toolStripButton2";
+            this.Stop.Text = "Stop";
             this.Stop.Click += new System.EventHandler(this.Stop_Click);
             // 
             // FormMatrixGrid
